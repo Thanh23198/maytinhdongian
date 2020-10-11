@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <input type="text" id="output"/>
+    <br/>
+    <button type="button" onclick="setoutput(1)">1</button>
+    <button type="button" onclick="setoutput(2)">2</button>
+    <button type="button" onclick="setoutput(3)">3</button>
+    <button type="button" onclick="setoutput('+')">+</button>
+    <br/>
+    <button type="button" onclick="setoutput(4)">4</button>
+    <button type="button" onclick="setoutput(5)">5</button>
+    <button type="button" onclick="setoutput(6)">6</button>
+    <button type="button" onclick="setoutput('-')">-</button>
+    <br/>
+    <button type="button" onclick="setoutput(7)">7</button>
+    <button type="button" onclick="setoutput(8)">8</button>
+    <button type="button" onclick="setoutput(9)">9</button>
+    <button type="button" onclick="setoutput('*')">x</button>
+    <br/>
+    <button type="button" onclick="reset('C')">C</button>
+    <button type="button" onclick="setoutput(0)">0</button>
+    <button type="button" onclick="calculator()">=</button>
+    <button type="button" onclick="setoutput('/')">/</button>
+</div>
+</body>
+<script>
+    function setoutput(value) {
+        document.getElementById('output').value += value;
+    }
+    function calculator(value) {
+        let output = document.getElementById('output').value;
+        result = eval(output);
+        document.getElementById('output').value = result;
+    }
+    function reset(){
+        document.getElementById('output').value = " ";
+    }
+</script>
+
+</body>
+
+</html>
